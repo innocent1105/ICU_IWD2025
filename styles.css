@@ -10,95 +10,127 @@ body {
     margin: 0; /* Removes default browser margin */
     padding: 0; /* Removes default browser padding */
     background-color: #f4f4f4; /* Light gray background color */
-    color: #333; /* Dark gray text color */
+    color: #171718; /* Dark gray text color */
 }
 
-/* Header Styling - Styles the header of the page */
-header {
-    background: #333; /* Dark background color */
-    color: white; /* White text for contrast */
-    text-align: center; /* Centers the text inside the header */
-    padding: 20px 0; /* Adds vertical spacing */
+.header{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-style: solid;
+    margin-top: 150px;
+    border-color: #f4f4f4;
+}
+.library{
+    width: auto;
+    height: auto;
+}
+.wrapper{
+    width: auto;
+    height: auto;
+    border-style: solid;
+    background-image: url('images/bg.gif');
+    background-size: cover;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+.chat-system{
+    height: 400px;
+    border-style: solid;
+}
+.messages{
+    border-color: #133fa533;
+}
+.top-bar{
+    /* width: calc(100vw - 50vw - 20px); */
+    background-color: rgb(7, 13, 22);
 }
 
-/* Navigation Bar Styling */
-nav ul {
-    list-style: none; /* Removes bullet points from the navigation list */
-    background: #444; /* Dark gray background color */
-    text-align: center; /* Centers the navigation links */
-    padding: 0; /* Removes extra space */
+.file{
+    width: 350px;
+    margin-bottom: 170px;
+    background-color: #2731466b;
+}
+.file-icon{
+    border-color: #343434;
+}
+.file-name{
+    width: 200px;
+    text-wrap:pretty;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}
+.cancel-btn{
+    /* border-color: #343434; */
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.cancel-btn:hover{
+    background-color: #1d2f5bab;
+    transform: scale(1.085);
+}
+.cancel-btn:active{
+    transform: scale(0.955);
 }
 
-nav ul li {
-    display: inline; /* Makes the navigation links appear horizontally */
-    padding: 15px; /* Adds space around each menu item */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 
-nav ul li a {
-    color: white; /* White text color */
-    text-decoration: none; /* Removes the underline from links */
+::-webkit-scrollbar-track {
+    background: #041a3b; /* Dark background */
+    border-radius: 10px;
 }
 
-/* Image Slider Styling - Styles the image carousel */
-.slider-container {
-    position: relative; /* Allows absolute positioning of slides */
-    max-width: 100%; /* Ensures images don't exceed the page width */
-    overflow: hidden; /* Prevents images from overflowing outside the container */
+::-webkit-scrollbar-thumb {
+    background: #1160d8; /* Gray thumb */
+    border-radius: 10px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 
-.slide {
-    display: none; /* Hides all slides by default */
-    width: 100%; /* Ensures images take full width of the container */
+::-webkit-scrollbar-thumb:hover {
+    background: #022575; /* Lighter on hover */
 }
 
-.slide img {
-    width: 50%; /* Adjusts image width to 50% of the container */
-    height: 400px; /* Sets a fixed height for all images */
-}
 
-/* Section Styling - Applies styling to all sections */
-section {
-    padding: 20px; /* Adds spacing inside each section */
-    margin: 20px; /* Adds spacing outside each section */
-    background: white; /* White background */
-    border-radius: 5px; /* Adds rounded corners */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
-}
 
-/* Form Styling - Styles the contact form */
-form {
-    display: flex; /* Uses flexbox to align elements vertically */
-    flex-direction: column; /* Ensures input fields are stacked */
-    width: 300px; /* Sets a fixed width for the form */
-    margin: auto; /* Centers the form */
-}
 
-form label {
-    margin-top: 10px; /* Adds spacing above labels */
-    font-weight: bold; /* Makes labels bold for emphasis */
-}
 
-form input, form textarea, form button {
-    margin-top: 10px; /* Adds spacing between form elements */
-    padding: 10px; /* Increases input and button padding for better readability */
-    border: 1px solid #ccc; /* Adds a light gray border */
-    border-radius: 5px; /* Rounds the edges of inputs and buttons */
-}
 
-form button {
-    background-color: #333; /* Dark background color for the button */
-    color: white; /* White text for better contrast */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-}
 
-form button:hover {
-    background-color: #555; /* Slightly lighter shade when hovered */
-}
 
-/* Footer Styling - Styles the footer section */
-footer {
-    text-align: center; /* Centers the text inside the footer */
-    padding: 10px; /* Adds padding to the footer */
-    background: #333; /* Dark background color */
-    color: white; /* White text color */
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
