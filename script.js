@@ -138,6 +138,8 @@ sendMessageButton.addEventListener('click', () => {
         userMessage = "from the text in the pdf : " + extractedText + user;
         console.log(userMessage);
         fileLoaded = false;
+    }else{
+        userMessage = user;
     }
     // Loading effect
     aiSendIcon.classList.add('animate-spin', 'transition-all');
