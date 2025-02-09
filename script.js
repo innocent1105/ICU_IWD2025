@@ -83,7 +83,7 @@
 let file_preview = document.getElementById("file-preview");
 let textContent = ""; 
 let extractedText = ""; 
-let fileLoaded = false;
+let fileLoaded = true;
 
 // Function to handle PDF file input
 document.getElementById("pdfInput").addEventListener("change", function(event) {
@@ -160,7 +160,7 @@ sendMessageButton.addEventListener('click', () => {
 
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
-    let question = userMessage;
+    let question = user;
     console.log(question)
 
     let result;
