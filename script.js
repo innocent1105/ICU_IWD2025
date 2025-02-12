@@ -12,7 +12,11 @@
                     slides[i].style.display = "none";
                 }
                 slideIndex = (slideIndex + 1) % slides.length;
+
+                slides[slideIndex].classList.add("hidden");
+
                 slides[slideIndex].style.display = "flex";
+                slides[slideIndex].classList.add("visible");
             }
 
             function startSlideShow() {
@@ -20,19 +24,17 @@
             }
 
             function changeSlide(step) {
-                clearInterval(slideInterval);
+                clearInterval(slideInterval); 
             
-                slides[slideIndex].classList.remove("active");
-                slides[slideIndex].style.transform = `translateX(${step > 0 ? '-100%' : '100%'})`; // Slide out
-                
-                slideIndex = (slideIndex + step + slides.length) % slides.length;
+                slideIndex = (slideIndex + step + slides.length) % slides.length; 
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
             
-                slides[slideIndex].classList.add("active");
-                slides[slideIndex].style.transform = "translateX(0)"; // Slide in
-            
+                // active slide
+                slides[slideIndex].style.display = "flex";
                 startSlideShow();
             }
-            
             showSlides();
             startSlideShow();
             
