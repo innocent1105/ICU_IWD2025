@@ -10,13 +10,13 @@ body {
     margin: 0; /* Removes default browser margin */
     padding: 0; /* Removes default browser padding */
     background-color: #f4f4f4; /* Light gray background color */
-    color: #333; /* Dark gray text color */
+    color: rgb(28, 23, 23); /* Dark gray text color */
 }
 
 /* Header Styling - Styles the header of the page */
 header {
     background: #ffffff; /* Dark background color */
-    color: #444; /* White text for contrast */
+    color: rgb(15, 15, 17); /* White text for contrast */
     text-align: center; /* Centers the text inside the header */
     padding: 20px 0; /* Adds vertical spacing */
     margin-top: 120px;
@@ -25,17 +25,18 @@ header h1{
     font-size: 35px;
 }
 nav{
+    z-index: 2;
     position: fixed;
     width: 100vw;
     padding: 10px;
-    background-color: #444;
+    background: rgb(26, 25, 30);
     top: 0px;
 }
 
 /* Navigation Bar Styling */
 nav ul {
     list-style: none; /* Removes bullet points from the navigation list */
-    background: #444; /* Dark gray background color */
+    background: rgb(26, 25, 30); /* Dark gray background color */
     text-align: center; /* Centers the navigation links */
     padding: 0; /* Removes extra space */
 }
@@ -45,16 +46,33 @@ nav ul li {
     padding: 15px; /* Adds space around each menu item */
 }
 
+/* nav li:hover{
+    transform: scale(1.52);
+} */
 nav ul li a {
-    color: white; /* White text color */
-    text-decoration: none; /* Removes the underline from links */
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+nav a:hover{
+    color: #5980ff;
+    transform: scale(1.083);
+}
+nav a:active{
+    font-size: 13px;
+    transform: scale(0.953);
+}
+nav .home{
+    color: #5980ff;
 }
 
-/* Image Slider Styling - Styles the image carousel */
+
 .slider-container {
     position: relative; /* Allows absolute positioning of slides */
     max-width: 100%; /* Ensures images don't exceed the page width */
     overflow: hidden; /* Prevents images from overflowing outside the container */
+    background-color: #333;
+    border-radius: 15px;
 }
 
 .hidden {
@@ -73,15 +91,45 @@ nav ul li a {
     display: none; /* Hides all slides by default */
     width: 100%; /* Ensures images take full width of the container */
     /* border-style: solid; */
+    background-color: rgb(27, 27, 29);
     transition-duration: 0.5s;
     justify-content: flex-start;
     gap: 10px;
+    z-index: -1;
+    animation: effect 5s ease-in-out;
 }
+
+
+
+@keyframes effect{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.7;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .text{
     width: 70%;
     padding: 20px;
     /* background: #333; */
-    color: #333;
+    color: rgb(30, 29, 31);
     /* border-style: solid; */
 }
 .big-text{
@@ -97,6 +145,8 @@ nav ul li a {
     object-fit: cover;
     border-radius: 15px;
     z-index: 1;
+    background-color: #333;
+
 }
 
 /* Section Styling - Applies styling to all sections */
@@ -147,9 +197,24 @@ footer {
 }
 .buttons{
     position: absolute;
-    border-style: solid;
+    /* border-style: solid; */
+    bottom: 50px;
+    left: 13%;
+}
+.buttons button{
+    cursor: pointer;
+    background-color: #f4f4f48c;
+    color: #141414;
+    font-size: 20px;
+    /* border-style: solid; */
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    border-style: hidden;
 }
 
+.buttons button:active{
+    transform: scale(0.885);
+}
 
 
 

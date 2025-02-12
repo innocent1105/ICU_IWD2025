@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Website</title>
     <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS file -->
-    <script src="script.js" defer></script> <!-- Linking external JavaScript file -->
+ <!-- Linking external JavaScript file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple-icons/siimple-icons.css" />
 </head>
 <body>
     <!-- Header Section -->
@@ -17,10 +18,10 @@
     <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li id="home" ><a class="home" id="a-home" href="#home">Home</a></li>
+            <li id="about"><a id="a_about" href="#about">About</a></li>
+            <li id="services"><a id="a_services" href="#services">Services</a></li>
+            <li id="contact"><a id="a_contact" href="#contact">Contact</a></li>
         </ul>
     </nav>
     
@@ -54,8 +55,12 @@
             </div>
         </div>
         <div class="buttons">
-            <button id="prevSlide">Prev</button>
-            <button id="nextSlide">Next</button>
+            <button id="prevSlide">
+                <i class="si-chevron-left"></i>
+            </button>
+            <button id="nextSlide">
+                <i class="si-chevron-right"></i>
+            </button>
         </div>
         
     </section>
@@ -107,5 +112,7 @@
     <footer>
         <p>&copy; 2025 Library Website. All rights reserved.</p>
     </footer>
+
+    <script src="script.js" defer></script> 
 </body>
 </html>
