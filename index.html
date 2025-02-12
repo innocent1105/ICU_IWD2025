@@ -8,11 +8,19 @@
  <!-- Linking external JavaScript file -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple-icons/siimple-icons.css" />
 </head>
-<body>
+<body id="body">
     <!-- Header Section -->
-    <header>
-        <h1>Welcome to Our Library</h1>
-        <p>Your gateway to knowledge and information.</p>
+    <header id="header">
+      
+        <div class="header-text">
+            <h1>Welcome to Our Library</h1>
+            <p>Your gateway to knowledge and information.</p>
+        </div>
+        <br>
+        <div class="logo">
+            <img src="./images/images (1).jpeg" alt="">
+        </div>
+  
     </header>
     
     <!-- Navigation Menu -->
@@ -28,10 +36,10 @@
     <!-- Image Slider Section -->
     <section id="slider">
        
-        <div class="slider-container">
+        <div class="slider-contai2ner">
             
             <div class="slide fade">
-                <img src="images/a.jpg" alt="Library Image 1"/>
+                <img src="images/IMG-20250212-WA0021.jpg" alt="Library Image 1"/>
                 <div class="text">
                     <div class="big-text">
                         Education
@@ -42,17 +50,30 @@
                 </div>
             </div>
             <div class="slide fade">
-                <img src="images/b.jpg" alt="Library Image 2">
+                <img src="images/IMG-20250212-WA0022.jpg" alt="Library Image 2">
                 <div class="text">
                     eger
                 </div>
             </div>
             <div class="slide fade">
-                <img src="images/c.jpg" alt="Library Image 3">
+                <img src="images/IMG-20250212-WA0023.jpg" alt="Library Image 3">
                 <div class="text">
                     eger
                 </div>
             </div>
+            <div class="slide fade">
+                <img src="images/IMG-20250212-WA0026.jpg" alt="Library Image 3">
+                <div class="text">
+                    eger
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="images/IMG-20250212-WA0025.jpg" alt="Library Image 3">
+                <div class="text">
+                    eger
+                </div>
+            </div>
+
         </div>
         <div class="buttons">
             <button id="prevSlide">
@@ -65,25 +86,41 @@
         
     </section>
     
-    <!-- HTML Topics Sections -->
-    <section id="html-topics">
-        <h2>HTML Topics</h2>
-        <div class="html-category">
-            <h3>HTML Basics</h3>
-            <p>HTML stands for HyperText Markup Language and is used to create webpages.</p>
+
+
+
+    <section id="about-us" class="about-us">
+        <div class="section-header">
+            About Us
         </div>
-        <div class="html-category">
-            <h3>HTML Elements & Attributes</h3>
-            <p>Elements are the building blocks of HTML pages, and attributes provide additional information about elements.</p>
-        </div>
-        <div class="html-category">
-            <h3>HTML Forms</h3>
-            <p>Forms are used to collect user inputs such as text, numbers, and passwords.</p>
+        <div class="txt">
+            Welcone to the information and Communication University Library. Under ZRD
         </div>
     </section>
     
+
+    <section id="services-section" class="section">
+        <div class="section-header">
+            Services
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Contact Form -->
-    <section id="contact">
+    <section id="contact-section">
         <h2>Contact Us</h2>
         <form id="contactForm">
             <label for="name">Name:</label>
@@ -102,10 +139,22 @@
     <!-- Embedded Video Section -->
     <section id="video">
         <h2>Library Tour</h2>
+        <div class="text"><i class="si-tv"></i> Watch</div>
         <video controls>
             <source src="library-tour.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+
+        <br><br><br><br>
+        <div class="text-2"><i class="si-image"></i>Pictures below</div>
+        
+        <div class="image-area">
+            <img class="first" src="./images/IMG-20250212-WA0021.jpg" alt="">
+            <img class="second" src="./images/IMG-20250212-WA0023.jpg" alt="">
+        </div>
+
+
+
     </section>
     
     <!-- Footer Section -->

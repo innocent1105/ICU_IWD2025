@@ -12,6 +12,13 @@
             let a_services = document.getElementById("a_services");
             let contact = document.getElementById("contact");
             let a_contact = document.getElementById("a_contact");
+            // sections
+            let contactUs = document.getElementById("contact-section");
+            let header = document.getElementById("header");
+            let body = document.getElementById("body");
+            let aboutUs = document.getElementById("about-us");
+            let servicesTab = document.getElementById("services-section");
+
 
             let previousTab = "";
             let activeTab = "home";
@@ -45,20 +52,36 @@
 
             home.addEventListener("click", ()=>{
                 active_tab("home");
+                body.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                })
             })
 
             about.addEventListener("click", ()=>{
                 active_tab("about");
+                aboutUs.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                })
                 console.log("about")
             })
 
             services.addEventListener("click", ()=>{
                 active_tab("service");
+                servicesTab.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                })
                 console.log("services")
             })
 
             contact.addEventListener("click", ()=>{
                 active_tab("contact");
+                contactUs.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                })
                 console.log("contact");
             })
 

@@ -6,7 +6,7 @@ It allows us to separate design from structure (HTML).
 
 /* General Page Styling */
 body {
-    font-family: Arial, sans-serif; /* Sets the default font for the entire page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0; /* Removes default browser margin */
     padding: 0; /* Removes default browser padding */
     background-color: #f4f4f4; /* Light gray background color */
@@ -15,11 +15,31 @@ body {
 
 /* Header Styling - Styles the header of the page */
 header {
+    /* border-style: solid; */
+    width: 100vw;
     background: #ffffff; /* Dark background color */
     color: rgb(15, 15, 17); /* White text for contrast */
     text-align: center; /* Centers the text inside the header */
     padding: 20px 0; /* Adds vertical spacing */
-    margin-top: 120px;
+    margin-top: 10px;
+    padding-top: 80px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+}
+header .logo{
+    width: 100vw;
+    /* border-style: solid; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+header img{
+    height: 80px;
+    object-fit: cover;
+}
+header .header-text{
+    /* border-style: solid; */
 }
 header h1{
     font-size: 35px;
@@ -65,7 +85,9 @@ nav a:active{
 nav .home{
     color: #5980ff;
 }
-
+.slider{
+   
+}
 
 .slider-container {
     position: relative; /* Allows absolute positioning of slides */
@@ -73,6 +95,9 @@ nav .home{
     overflow: hidden; /* Prevents images from overflowing outside the container */
     background-color: #333;
     border-radius: 15px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-style: solid;
 }
 
 .hidden {
@@ -119,18 +144,29 @@ nav .home{
 
 
 
+section h2{
+    margin-left: 15%;
+}
+section video{
+    margin-left: 15%;
+}
 
 
 
-
-
+.text-2{
+    width: auto;
+    /* border-style: solid; */
+    text-align:right ;
+    color: #555;
+    padding-right: 15%;
+}
 
 .text{
-    width: 70%;
+    /* width: 70%; */
     padding: 20px;
     /* background: #333; */
-    color: rgb(30, 29, 31);
-    /* border-style: solid; */
+    color: #555;
+    margin-left: 15%;
 }
 .big-text{
     font-size: 25px;
@@ -139,7 +175,7 @@ nav .home{
     font-size: 12px;
 }
 .slide img {
-    width: 30%; /* Adjusts image width to 50% of the container */
+    width: 40%; /* Adjusts image width to 50% of the container */
     height: 270px; /* Sets a fixed height for all images */
     /* border-style: solid; */
     object-fit: cover;
@@ -195,15 +231,18 @@ footer {
     background: #333; /* Dark background color */
     color: white; /* White text color */
 }
+
 .buttons{
     position: absolute;
     /* border-style: solid; */
-    bottom: 50px;
-    left: 13%;
+    bottom: -10px;
+    left: 27%;
+    gap: 10px;
+    display: flex;
 }
 .buttons button{
     cursor: pointer;
-    background-color: #f4f4f48c;
+    background-color: #f4f4f4e8;
     color: #141414;
     font-size: 20px;
     /* border-style: solid; */
@@ -215,11 +254,40 @@ footer {
 .buttons button:active{
     transform: scale(0.885);
 }
+.about-us{
 
-
-
-
-
+}
+.about-us .section-header{
+    font-size: 25px;
+    font-weight: 700;
+}
+form textarea{
+    resize: none;
+}
+.image-area{
+    width: auto;
+    height: auto;
+    /* border-style: solid; */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+.image-area img{
+    /* border-style: solid; */
+}
+.image-area .first{
+    width: 50%;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.image-area .second{
+    width: 25%;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+}
 
 
 
