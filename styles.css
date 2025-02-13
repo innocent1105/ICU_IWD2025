@@ -48,7 +48,8 @@ nav{
     z-index: 2;
     position: fixed;
     width: 100vw;
-    padding: 10px;
+    /* padding: 10px; */
+    padding-top: 0px;
     background: rgb(26, 25, 30);
     top: 0px;
 }
@@ -62,8 +63,9 @@ nav ul {
 }
 
 nav ul li {
-    display: inline; /* Makes the navigation links appear horizontally */
-    padding: 15px; /* Adds space around each menu item */
+    display: inline;
+    padding: 15px;
+    padding-top: 0px;
 }
 
 /* nav li:hover{
@@ -85,15 +87,16 @@ nav a:active{
 nav .home{
     color: #5980ff;
 }
-.slider{
-   
-}
+/* .slider{
+   -left: 10vw;
+   margin-right: 10vw;
+} */
 
 .slider-container {
     position: relative; /* Allows absolute positioning of slides */
     max-width: 100%; /* Ensures images don't exceed the page width */
     overflow: hidden; /* Prevents images from overflowing outside the container */
-    background-color: #333;
+    /* background-color: #333; */
     border-radius: 15px;
     margin-left: 15%;
     margin-right: 15%;
@@ -116,7 +119,7 @@ nav .home{
     display: none; /* Hides all slides by default */
     width: 100%; /* Ensures images take full width of the container */
     /* border-style: solid; */
-    background-color: rgb(27, 27, 29);
+    /* background-color: rgb(27, 27, 29); */
     transition-duration: 0.5s;
     justify-content: flex-start;
     gap: 10px;
@@ -161,6 +164,10 @@ section video{
     padding-right: 15%;
 }
 
+.slide .text{
+    margin-left: 0px;
+}
+
 .text{
     /* width: 70%; */
     padding: 20px;
@@ -181,7 +188,7 @@ section video{
     object-fit: cover;
     border-radius: 15px;
     z-index: 1;
-    background-color: #333;
+    /* background-color: #333; */
 
 }
 
@@ -189,6 +196,8 @@ section video{
 section {
     padding: 20px; /* Adds spacing inside each section */
     margin: 20px; /* Adds spacing outside each section */
+    margin-left: 10vw;
+    margin-right: 10vw;
     background: white; /* White background */
     border-radius: 5px; /* Adds rounded corners */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
@@ -236,7 +245,7 @@ footer {
     position: absolute;
     /* border-style: solid; */
     bottom: -10px;
-    left: 27%;
+    left: 18%;
     gap: 10px;
     display: flex;
 }
@@ -288,7 +297,131 @@ form textarea{
     border-radius: 15px;
     object-fit: cover;
 }
+.mobile-nav{
+    display: none;
+}
 
+
+
+
+
+
+@media (max-width: 750px){   
+    .buttons{
+       width: 100px;
+        /* border-style: solid; */
+       height: auto;
+       position:relative;
+       bottom: 60px;
+       left: 35vw;
+    }
+    .buttons button{
+        cursor: pointer;
+        background-color: #f4f4f4e8;
+        color: #141414;
+        font-size: 20px;
+        /* border-style: solid; */
+        transition-duration: 0.3s;
+        border-radius: 5px;
+        border-style: hidden;
+    }
+
+    .buttons button:active{
+        transform: scale(0.885);
+    }
+    .header-text{
+        /* border-style: solid; */
+    }
+    .header-text h1{
+        font-size: 24px;
+        margin: 0px;
+        margin-top: 20px;
+    }
+
+    nav{
+        height: 70px;
+        transition-duration: 1s;
+        /* transition-timing-function: ease-in-out; */
+        overflow: hidden;
+    }
+   
+    .mobile-nav{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    nav .links{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-logo{
+        color: #f4f4f4;
+        font-size: 20px;
+        font-weight: 500;
+        align-content: center;
+    }
+    .menu-btn{
+        width: auto;
+        height: auto;
+        padding: 10px;
+        /* border-style: solid; */
+        color: #f4f4f4;
+        font-size: 24px;
+        border-radius: 10px;
+        margin-right: 10vw;
+        transition-duration: 0.3s;
+    }
+    .menu-btn:hover{
+        transform: scale(0.945);
+        background-color: #f4f4f423;
+    }
+    .menu-btn:active{
+        transform: scale(1.053);
+    }
+    .slide {
+        display: block;
+        border-radius: 15px;
+    }
+    .slide img{
+        width: 100%;
+    }
+    .slide .text{
+        position: absolute;
+        z-index: -1;
+    }
+    section {
+        padding: 10px;
+        /* border-style: solid; */
+        margin: 10px;
+        background: white; /* White background */
+        border-radius: 5px; /* Adds rounded corners */
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+    }
+    
+    .text-2{
+        /* border-style: solid; */
+        text-align: left;
+    }
+    .image-area{
+        /* border-style: solid; */
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .image-area .first, .image-area .second{
+        width: 100%;
+        border-radius: 5px;
+    }
+    .br{
+        display: none;
+    }
+
+
+}
 
 
 

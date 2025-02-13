@@ -4,6 +4,55 @@
     if (typeof window !== "undefined" && typeof document !== "undefined") {
         document.addEventListener("DOMContentLoaded", function () {
 
+            // mobile menu
+            let menu_btn = document.getElementById("menu-btn");
+            let links = document.getElementById("menu-links");
+            let nav = document.getElementById("nav");
+
+            let opened = false;
+                function close_menu(menu){
+                    setTimeout(()=>{
+                        menu.style.height = "70px";
+                    },5000);
+                }
+                menu_btn.addEventListener("click", ()=>{
+                    if(!opened){
+                        nav.style.height = "auto";
+                        opened = true;
+                    }else{
+                        nav.style.height = "70px";
+                        opened = false;
+                    }
+                   close_menu(nav);
+                })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             let home = document.getElementById("home");
             let a_home = document.getElementById("a-home");
             let about = document.getElementById("about");
