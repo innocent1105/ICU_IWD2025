@@ -420,6 +420,13 @@ form textarea{
         flex-direction: column;
         margin-top: 10px;
     }
+    .books-header{
+        font-size: 25px;
+        font-weight: 700;
+        margin-left: 10vw;
+        margin-top: 25px;
+    }
+    
     .image-area .first, .image-area .second{
         width: 100%;
         border-radius: 5px;
@@ -498,6 +505,9 @@ form textarea{
 .books-header{
     text-align: left;
 }
+.section a{
+    text-decoration: none;
+}   
 
 
 
