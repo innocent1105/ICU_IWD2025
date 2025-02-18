@@ -194,4 +194,78 @@
             }
         });
     }
+
+
+    // fetch books
+     /**
+     * Function to fetch books from Google Books API
+     * @param {string} category - The category of books to fetch
+     */
+     function fetchBooks(category = "all") {
+        try{
+      
+        let query = category === "all" ? "library" : category; 
+        // Sets the default query to "library" unless another category is selected
+
+        fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=6`) 
+        // Calls the Google Books API to fetch books
+        
+            .then(response => response.json()) 
+            // Converts the response to JSON format
+            
+            .then(data => {
+                let bookList = document.getElementById("bookList"); 
+                // Gets the container where books will be displayed
+                bookList.innerHTML = ""; 
+                // Clears previous books
+
+                data.items.forEach(book => { 
+                    // Loops through each book in the fetched data
+                    let bookDiv = document.createElement("div"); 
+                        bookDiv.setAttribute("class", "book")
+                    // Creates a new <div> element for the book
+                    console.log(book);
+                    let isBorrowed = Math.random() < 0.5; 
+                    // Randomly assigns a borrowed status
+                    let bookTitle = book.volumeInfo.title;
+                        if(bookTitle.length > 10){
+                            bookTitle = bookTitle.substring(0, 50) + "...";
+                        }
+                    bookDiv.innerHTML = `
+                        <img src="${book.volumeInfo.imageLinks?.thumbnail || 'https://via.placeholder.com/200'}">
+                        <h4>${bookTitle}</h4>
+                        <button class="borrow-btn ${isBorrowed ? 'borrowed' : ''}">
+                            ${isBorrowed ? "Borrowed" : "Borrow"}
+                        </button>
+                    `;
+                    bookList.appendChild(bookDiv);
+                });
+            });
+                  
+        }catch(err){
+            fetchBooks(category = "all");
+            console.log("retrying fetch");
+        }
+    }
+
+    fetchBooks(); 
+    // Loads books when the page loads
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })();

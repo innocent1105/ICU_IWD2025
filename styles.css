@@ -270,6 +270,14 @@ footer {
     font-size: 25px;
     font-weight: 700;
 }
+.books-header{
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 10vw;
+    margin-top: 25px;
+}
+
+
 form textarea{
     resize: none;
 }
@@ -422,6 +430,76 @@ form textarea{
 
 
 }
+.book-list{
+    width: auto;
+    height: auto;
+    /* border-style: solid; */
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.book{
+    width: 25%;
+    height: auto;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: #f4f4f4;
+    margin-top: 25px;
+    transition-duration: 0.3s;
+}
+.book:hover{
+    width: 30%;
+    height: auto;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: #f4f4f4;
+    margin-top: 25px;
+    transform: scale(1);
+    background-color: #0f0f13d7;
+    color: #f4f4f4;
+}
+.book:active{
+    transform: scale(0.83256);
+}
+
+
+
+.book img{
+    width: 100%;
+    border-style: solid;
+    border-color: #d6e0ff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+/* .book img:hover{
+    transform: scale(1.5);
+}
+.book img:active{
+    transform: scale(1.25);
+} */
+
+.book button{
+    width: auto;
+    height: auto;
+    /* position: absolute; */
+    bottom: 5px;
+    /* right: 5px; */
+    background-color: #dde5ff;
+    border-style: hidden;
+    padding: 10px;
+    border-radius: 5px;
+}
+.books-header{
+    text-align: left;
+}
+
+
 
 
 
