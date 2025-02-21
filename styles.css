@@ -222,7 +222,11 @@ form input, form textarea, form button {
     border: 1px solid #ccc; /* Adds a light gray border */
     border-radius: 5px; /* Rounds the edges of inputs and buttons */
 }
-
+.backgroundimg img{
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+}
 form button {
     background-color: #333; /* Dark background color for the button */
     color: white; /* White text for better contrast */
@@ -434,7 +438,7 @@ form textarea{
     .br{
         display: none;
     }
-
+    
 
 }
 .book-list{
